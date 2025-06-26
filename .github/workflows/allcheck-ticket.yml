@@ -13,7 +13,6 @@ jobs:
         with:
           product-id: 211408
           schedule-id: 100001
-          seat-id: 1_0
           slack-incoming-webhook-url: ${{ secrets.SLACK_WEBHOOK_URL }}
           message: "🎟️ 티켓이 떴어요!"
 
@@ -25,7 +24,6 @@ jobs:
         with:
           product-id: 211408
           schedule-id: 100002
-          seat-id: 1_0
           slack-incoming-webhook-url: ${{ secrets.SLACK_WEBHOOK_URL }}
           message: "🎟️ 티켓이 떴어요!"
 
@@ -37,6 +35,5 @@ jobs:
         with:
           product-id: 211408
           schedule-id: 100003
-          seat-id: 1_0
           slack-incoming-webhook-url: ${{ secrets.SLACK_WEBHOOK_URL }}
           message: "🎟️ 티켓이 떴어요!"
