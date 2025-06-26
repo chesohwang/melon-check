@@ -2,7 +2,6 @@ name: Check Melon Tickets
 
 on:
   schedule:
-    # 5분마다 실행
     - cron: "*/5 * * * *"
 
 jobs:
@@ -16,7 +15,7 @@ jobs:
           schedule-id: 100001
           seat-id: 1_0
           slack-incoming-webhook-url: ${{ secrets.SLACK_WEBHOOK_URL }}
-          message: '🎟️ 티켓이 떴어요!'
+          message: "🎟️ 티켓이 떴어요!"
 
   check-july-5:
     runs-on: ubuntu-latest
@@ -28,7 +27,7 @@ jobs:
           schedule-id: 100002
           seat-id: 1_0
           slack-incoming-webhook-url: ${{ secrets.SLACK_WEBHOOK_URL }}
-          message: '🎟️ 티켓이 떴어요!'
+          message: "🎟️ 티켓이 떴어요!"
 
   check-july-6:
     runs-on: ubuntu-latest
@@ -40,5 +39,4 @@ jobs:
           schedule-id: 100003
           seat-id: 1_0
           slack-incoming-webhook-url: ${{ secrets.SLACK_WEBHOOK_URL }}
-          message: '🎟️ 티켓이 떴어요!'
-
+          message: "🎟️ 티켓이 떴어요!"
