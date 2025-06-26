@@ -2,8 +2,8 @@ name: Check Melon Tickets
 
 on:
   schedule:
-    - cron: '*/5 * * * *' # 5분마다 실행
-    workflow_dispatch:
+    # 5분마다 실행
+    - cron: "*/5 * * * *"
 
 jobs:
   check-july-4:
@@ -41,3 +41,4 @@ jobs:
           seat-id: 1_0
           slack-incoming-webhook-url: ${{ secrets.SLACK_WEBHOOK_URL }}
           message: '🎟️ 티켓이 떴어요!'
+
