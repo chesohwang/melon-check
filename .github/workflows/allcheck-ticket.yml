@@ -1,0 +1,42 @@
+name: Check Melon Tickets
+
+on:
+  schedule:
+    - cron: '*/5 * * * *' # 5분마다 실행
+
+jobs:
+  check-july-4:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check Tickets for July 4
+        uses: mooyoul/melon-ticket-actions@v1.1.0
+        with:
+          product-id: 211408
+          schedule-id: 100001
+          seat-id: 1_0
+          slack-incoming-webhook-url: ${{ secrets.SLACK_WEBHOOK_URL }}
+          message: '🎟️ 티켓이 떴어요!'
+
+  check-july-5:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check Tickets for July 5
+        uses: mooyoul/melon-ticket-actions@v1.1.0
+        with:
+          product-id: 211408
+          schedule-id: 100002
+          seat-id: 1_0
+          slack-incoming-webhook-url: ${{ secrets.SLACK_WEBHOOK_URL }}
+          message: '🎟️ 티켓이 떴어요!'
+
+  check-july-6:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check Tickets for July 6
+        uses: mooyoul/melon-ticket-actions@v1.1.0
+        with:
+          product-id: 211408
+          schedule-id: 100003
+          seat-id: 1_0
+          slack-incoming-webhook-url: ${{ secrets.SLACK_WEBHOOK_URL }}
+          message: '🎟️ 티켓이 떴어요!'
