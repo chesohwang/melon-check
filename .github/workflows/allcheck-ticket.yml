@@ -3,6 +3,7 @@ name: Check Melon Tickets
 on:
   schedule:
     - cron: '*/5 * * * *' # 5분마다 실행
+    workflow_dispatch:
 
 jobs:
   check-july-4:
