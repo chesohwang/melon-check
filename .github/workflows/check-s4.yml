@@ -1,0 +1,18 @@
+name: Check S4 STANDING
+
+on:
+  schedule:
+    - cron: '*/5 * * * *'
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check S4
+        uses: mooyoul/melon-ticket-actions@v1.1.0
+        with:
+          product-id: 211408
+          schedule-id: 100001
+          seat-id: 1_0
+          slack-incoming-webhook-url: ${{ secrets.SLACK_WEBHOOK_URL }}
+          message: '🎫 티켓 떴어요!'
